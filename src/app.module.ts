@@ -11,14 +11,15 @@ import { MOVIE_REPOSITORY } from './movie/repositories/movie.repository';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'myuser',
-      password: 'mypassword',
-      database: 'mydatabase',
+      host: 'aws-0-ap-south-1.pooler.supabase.com',
+      port: 6543,
+      username: 'postgres.ugeszlrdsjfuvyzhvfoq',
+      password: 'n1m5l8RtgGvt52dY',
+      database: 'postgres',
       entities: [MovieEntity],
       synchronize: true,
-    }),
+    })
+    ,
     TypeOrmModule.forFeature([MovieEntity]),
   ],
   controllers: [MovieController],
